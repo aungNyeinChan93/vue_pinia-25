@@ -13,5 +13,4 @@ import GuestVue from './components/layouts/Guest.vue'
     </div>
   </header>
 
-  <RouterView />
 </template>

@@ -29,7 +29,8 @@ import { RouterLink } from "vue-router";
                             </li>
 
                             <li>
-                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> History </a>
+                                <RouterLink :to="{ name: 'test' }"
+                                    class="text-gray-500 transition hover:text-gray-500/75">Test</RouterLink>
                             </li>
 
                             <li>

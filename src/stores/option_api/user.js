@@ -15,10 +15,17 @@ export const useUserStore = defineStore("user", {
       const { data } = await axios.get(url);
       this.users = data;
     },
+    async postUser(url, userdata) {
+      // this.users.push(userdata);
+      await axios.post(url, userdata);
+    },
   },
 
   // getters
   getters: {
     getName: (state) => state.name,
+    allTypes: (state) => state.types.map((s) => s.toUpperCase()),
   },
+
+  persist: true,
 });
