@@ -34,7 +34,8 @@ import { RouterLink } from "vue-router";
                             </li>
 
                             <li>
-                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a>
+                                <RouterLink :to="{ name: 'todos' }"
+                                    class="text-gray-500 transition hover:text-gray-500/75">Todo</RouterLink>
                             </li>
 
                             <li>

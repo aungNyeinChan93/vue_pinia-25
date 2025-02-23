@@ -2,7 +2,7 @@ import axios from "axios";
 import { defineStore } from "pinia";
 
 export const useUserStore = defineStore("user", {
-  // states
+  // states :is reactive
   state: () => ({
     name: "userStore",
     users: [],
@@ -21,7 +21,7 @@ export const useUserStore = defineStore("user", {
     },
   },
 
-  // getters
+  // getters (computed)
   getters: {
     getName: (state) => state.name,
     allTypes: (state) => state.types.map((s) => s.toUpperCase()),
