@@ -20,30 +20,37 @@ import { RouterLink } from "vue-router";
                         <ul class="flex items-center gap-6 text-sm">
                             <li>
                                 <RouterLink :to="{ name: 'home' }"
-                                    class="text-gray-500 transition hover:text-gray-500/75">Home</RouterLink>
+                                    class="text-gray-500 transition hover:text-gray-500/75"
+                                    :class="{ 'text-red-600': $route.name === 'home' }">Home</RouterLink>
                             </li>
 
                             <li>
                                 <RouterLink :to="{ name: 'users' }"
-                                    class="text-gray-500 transition hover:text-gray-500/75">User</RouterLink>
+                                    class="text-gray-500 transition hover:text-gray-500/75"
+                                    :class="{ 'text-red-600': $route.name === 'users' }">User</RouterLink>
                             </li>
 
                             <li>
                                 <RouterLink :to="{ name: 'test' }"
-                                    class="text-gray-500 transition hover:text-gray-500/75">Test</RouterLink>
+                                    class="text-gray-500 transition hover:text-gray-500/75"
+                                    :class="{ 'text-red-600': $route.name === 'test' }">Test</RouterLink>
                             </li>
 
                             <li>
                                 <RouterLink :to="{ name: 'todos' }"
-                                    class="text-gray-500 transition hover:text-gray-500/75">Todo</RouterLink>
+                                    class="text-gray-500 transition hover:text-gray-500/75"
+                                    :class="{ 'text-red-600': $route.name === 'todos' }">Todo</RouterLink>
                             </li>
 
                             <li>
-                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </a>
+                                <RouterLink :to="{ name: 'piniaTask' }"
+                                    class="text-gray-500 transition hover:text-gray-500/75"
+                                    :class="{ 'text-red-600': $route.name === 'piniaTask' }">Pinia Task</RouterLink>
                             </li>
 
                             <li>
-                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
+                                <a class="text-gray-500 transition hover:text-gray-500/75"
+                                    :class="{ 'text-red-600': $route.name === '' }" href="#"> Blog </a>
                             </li>
                         </ul>
                     </nav>

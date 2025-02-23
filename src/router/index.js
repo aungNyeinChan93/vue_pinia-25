@@ -24,6 +24,11 @@ const router = createRouter({
       name: "todos",
       component: () => import("@/views/TodoView.vue"),
     },
+    {
+      path: "/piniaTask",
+      name: "piniaTask",
+      component: () => import("@/views/PiniaTaskView.vue"),
+    },
   ],
 });
 
