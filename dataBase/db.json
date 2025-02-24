@@ -230,5 +230,17 @@
         "bs": "target end-to-end models"
       }
     }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "sadasd",
+      "favStatus": false
+    },
+    {
+      "id": "1",
+      "title": "asdas",
+      "favStatus": false
+    }
   ]
 }

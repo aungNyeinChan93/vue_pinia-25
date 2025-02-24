@@ -1,19 +1,18 @@
 <script setup>
 import { usePiniaTaskStore } from '@/stores/option_api/piniaTask';
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 
-const { addTask, totalCount } = usePiniaTaskStore()
+const { addTask, totalCount, } = usePiniaTaskStore()
 
-const form = reactive({
-    id: totalCount + 1,
-    title: "",
-    favStatus: false
-})
+const title = ref()
 const add = () => {
-    if (form.title !== "") {
-        addTask(form)
-        // form.title = ''
-        window.location.reload()
+    if (title.value !== "") {
+        addTask('http://localhost:4002/tasks', {
+            id: (totalCount + 1).toString(),
+            title: title.value,
+            favStatus: false
+        })
+        title.value = ''
     }
 }
 
@@ -24,7 +23,7 @@ const add = () => {
         <div class="flex justify-center space-x-10 items-center p-4">
             <img src="@/assets/images/pinia.png" alt="img" class="w-[60px]">
             <div>
-                <input type="text" id="task" placeholder="Pinia Task" v-model="form.title"
+                <input type="text" id="task" placeholder="Pinia Task" v-model="title"
                     class="bg-yellow-300 p-2 rounded border border-red-400 inline-block w-[200px] md:w-[300px] ">
                 <button @click="add"
                     class="bg-yellow-300 px-4 ms-2 text-gray-500 hover:bg-yellow-200 py-2 border rounded-2xl  border-red-400">
