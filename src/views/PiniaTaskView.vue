@@ -3,16 +3,15 @@ import Header from '@/components/piniaTask/Header.vue';
 import TaskLists from '@/components/piniaTask/TaskLists.vue';
 import { usePiniaTaskStore } from '@/stores/option_api/piniaTask';
 import FilterSection from '@/components/piniaTask/FilterSection.vue';
-import { ref } from 'vue';
+import { ref, reactive } from 'vue';
 
-const { getTasks, getFavTasks, getUnfavTasks, filterTypes: [all, fav, unFav], favCount, totalCount, unFavCount } = usePiniaTaskStore();
+const { getTasks, getFavTasks, getUnfavTasks, filterTypes: [all, fav, unFav], favCount, totalCount } = usePiniaTaskStore();
 
 const filterStatus = ref('all');
-const handleFilter = (filterType) => {
-    filterStatus.value = filterType;
+
+const handelUpdateFilterStatus = (filterType) => {
+    filterStatus.value = filterType
 }
-
-
 </script>
 
 <template>
@@ -20,21 +19,21 @@ const handleFilter = (filterType) => {
 
         <Header />
 
-        <FilterSection @filter:emit="handleFilter" />
+        <FilterSection @update:filter-status="handelUpdateFilterStatus" :filterStatus="filterStatus" />
 
-        <div v-if="filterStatus === 'all'">
+        <div v-if="filterStatus === all">
             <p class="text-center text-red-400 p-3 text-lg">You have {{ totalCount }} tasks</p>
             <template v-for="task in getTasks" :key="task.id">
                 <TaskLists :task="task" />
             </template>
         </div>
-        <div v-if="filterStatus === 'fav'">
+        <div v-if="filterStatus === fav">
             <p class="text-center text-red-400 p-3 text-lg">You have {{ favCount }} tasks</p>
             <template v-for="task in getFavTasks" :key="task.id">
                 <TaskLists :task="task" />
             </template>
         </div>
-        <div v-if="filterStatus === 'unFav'">
+        <div v-if="filterStatus === unFav">
             <p class="text-center text-red-400 p-3 text-lg">You have {{ totalCount - favCount }} tasks</p>
             <template v-for="task in getUnfavTasks" :key="task.id">
                 <TaskLists :task="task" />

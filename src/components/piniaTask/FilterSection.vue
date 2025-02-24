@@ -1,12 +1,18 @@
 <script setup>
 import { usePiniaTaskStore } from '@/stores/option_api/piniaTask';
+import Filter from './Filter.vue';
 
-defineProps({
-    activeStatus: Boolean
+const { filterTypes } = usePiniaTaskStore();
+
+const props = defineProps({
+    filterStatus: { type: String }
 })
 
-const emit = defineEmits(['filter:emit'])
-const { filterTypes } = usePiniaTaskStore();
+const emit = defineEmits(['update:filterStatus']);
+
+const handleFilterEmit = (filterType) => {
+    emit('update:filterStatus', filterType);
+}
 
 </script>
 
@@ -14,10 +20,7 @@ const { filterTypes } = usePiniaTaskStore();
     <section class="bg-slate-300  ">
         <div class="flex justify-end space-x-10 items-center p-4">
             <template v-for="filterType in filterTypes" :key="filterType">
-                <span class="px-4 py-1 rounded-lg bg-yellow-300 hover:bg-yellow-200 text-gray-600 text-sm capitalize"
-                    @click="$emit('filter:emit', filterType)">
-                    {{ filterType }}
-                </span>
+                <Filter :filterType="filterType" @filter:emit="handleFilterEmit" :status="filterType == filterStatus" />
             </template>
         </div>
     </section>
