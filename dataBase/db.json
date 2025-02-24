@@ -242,5 +242,112 @@
       "title": "asdas",
       "favStatus": false
     }
+  ],
+  "customers": [
+    {
+      "id": "1",
+      "name": "susu",
+      "email": "susu@123",
+      "type": "normal",
+      "avator": "https://example.com/avatar1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "koko",
+      "email": "koko@123",
+      "type": "normal",
+      "avator": "https://example.com/avatar2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "mgmg",
+      "email": "mgmg@123",
+      "type": "normal",
+      "avator": "https://example.com/avatar3.jpg"
+    },
+    {
+      "id": "4",
+      "name": "aungaung",
+      "email": "mgmg@123",
+      "type": "normal",
+      "avator": "https://example.com/avatar4.jpg"
+    },
+    {
+      "id": "93a8",
+      "name": "A reiciendis cum dol",
+      "email": "harojysux@mailinator.com",
+      "type": "silver",
+      "avator": null
+    },
+    {
+      "id": "86b5",
+      "name": "Qui proident esse a",
+      "email": "jecywybiz@mailinator.com",
+      "type": "normal",
+      "avator": {}
+    },
+    {
+      "id": "2698",
+      "name": "Non mollitia quas vo",
+      "email": "dyfixyre@mailinator.com",
+      "type": "silver",
+      "avator": "grahame-jenkins-p7tai9P7H-s-unsplash.jpg"
+    },
+    {
+      "id": "3db2",
+      "name": "Ipsum excepturi und",
+      "email": "ceqilenole@mailinator.com",
+      "type": "gold",
+      "avator": "lance-asper-N9Pf2J656aQ-unsplash.jpg"
+    },
+    {
+      "id": "6ce7",
+      "name": "Qui nihil ab aut dis",
+      "email": "qesuw@mailinator.com",
+      "type": "silver",
+      "avator": null
+    },
+    {
+      "id": "47af",
+      "name": "Maxime a dolor illum",
+      "email": "dazybowut@mailinator.com",
+      "type": "gold",
+      "avator": null
+    },
+    {
+      "id": "38a6",
+      "name": "Minima a ut sunt co",
+      "email": "datawysiza@mailinator.com",
+      "type": "silver",
+      "avator": null
+    },
+    {
+      "id": "244c",
+      "name": "Reiciendis quaerat n",
+      "email": "zykiky@mailinator.com",
+      "type": "silver",
+      "avator": null
+    },
+    {
+      "id": "15e7",
+      "name": "Incididunt nisi dolo",
+      "email": "dexetyfobi@mailinator.com",
+      "type": "silver",
+      "avator": null
+    },
+    {
+      "id": "3932",
+      "name": "Doloremque rem quide",
+      "email": "hogik@mailinator.com",
+      "type": "silver",
+      "avator": null
+    },
+    {
+      "id": "c21d",
+      "name": "Qui eveniet corrupt",
+      "email": "zagawysyd@mailinator.com",
+      "type": "gold",
+      "avator": null
+    }
   ]
 }

@@ -29,6 +29,11 @@ const router = createRouter({
       name: "piniaTask",
       component: () => import("@/views/PiniaTaskView.vue"),
     },
+    {
+      path: "/customers",
+      name: "customers",
+      component: () => import("@/views/CustomerView.vue"),
+    },
   ],
 });
 

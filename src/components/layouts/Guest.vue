@@ -31,9 +31,9 @@ import { RouterLink } from "vue-router";
                             </li>
 
                             <li>
-                                <RouterLink :to="{ name: 'test' }"
+                                <RouterLink :to="{ name: 'customers' }"
                                     class="text-gray-500 transition hover:text-gray-500/75"
-                                    :class="{ 'text-red-600': $route.name === 'test' }">Test</RouterLink>
+                                    :class="{ 'text-red-600': $route.name === 'customers' }">Customers</RouterLink>
                             </li>
 
                             <li>

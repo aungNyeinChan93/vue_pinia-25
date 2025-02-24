@@ -13,6 +13,7 @@ onMounted(() => {
 
 <template>
     <section class="w-full h-screen mt-5 ">
+
         <div class="users grid grid-cols-1 gap-4 mx-10 ">
             <UserListsTable :users="users" />
         </div>
